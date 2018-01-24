@@ -3,7 +3,6 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 /**
@@ -118,9 +117,9 @@ public class TeleOp4653 {
                 servoArmLeft.setPosition(ARM_MIN);
                 servoArmRight.setPosition(ARM_MIN);
             }
-            // insert code for arms to close
+                // insert code for arms to close
 
-            //raise and lower the stinger, can do this on a dual button, or while a single button is pressed
+                //raise and lower the stinger, can do this on a dual button, or while a single button is pressed
             if (gamepad1.y){                            //raise the stinger
                 servoStinger.setPosition(STINGER_MAX);
             }
@@ -128,8 +127,8 @@ public class TeleOp4653 {
                 servoStinger.setPosition(STINGER_MIN);
             }
 
-            // Show the elapsed game time and wheel power.
-            telemetry.addData("Status", "Run Time: " + runtime.toString());
+                // Show the elapsed game time and wheel power.
+                telemetry.addData("Status", "Run Time: " + runtime.toString());
             telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftPower, rightPower);
         }
 
