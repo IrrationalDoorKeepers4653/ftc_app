@@ -9,7 +9,6 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  * Created by silkenhons on 10/17/2017.
  */
 
-public class TeleOp4653 {
     /* Copyright (c) 2017 FIRST. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -21,10 +20,11 @@ public class TeleOp4653 {
  *
 */
 
-    @TeleOp(name="Basic: TeleOp4653", group="Iterative Opmode")
+    @TeleOp(name="Basic: BasicOpMode_Iterative", group="Iterative Opmode")
 
-    public class BasicOpMode_Iterative extends OpMode
-    {
+    public class TeleOp4653 extends OpMode {
+
+        HardwarePushbot robot     = new HardwarePushbot();
         // Declare OpMode members.
         private ElapsedTime runtime = new ElapsedTime();
         private DcMotor leftDrive = null;
@@ -47,6 +47,7 @@ public class TeleOp4653 {
          */
         @Override
         public void init() {
+
             telemetry.addData("Status", "Initialized");
 
             // Initialize the hardware variables. Note that the strings used here as parameters
@@ -76,6 +77,7 @@ public class TeleOp4653 {
          */
         @Override
         public void init_loop() {
+            telemetry.addLine("Hi! Initialization Complete!");
         }
 
         /*
@@ -141,4 +143,3 @@ public class TeleOp4653 {
 
     }
 
-}
